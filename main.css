@@ -1,0 +1,297 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  
+  /* Set font size for easy rem calculations
+   * default document font size = 16px, 1rem = 16px, 100% = 16px
+   * (100% / 16px) * 10 = 62.5%, 1rem = 10px, 62.5% = 10px
+  */
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+/* 1200px / 16px = 75em */
+@media (max-width: 75em) {
+  html {
+    font-size: 60%;
+  }
+}
+
+/* 980px / 16px = 61.25em */
+@media (max-width: 61.25em) {
+  html {
+    font-size: 58%;
+  }
+}
+
+/* 460px / 16px = 28.75em */
+@media (max-width: 28.75em) {
+  html {
+    font-size: 55%;
+  }
+}
+
+body {
+  font-family: "Roboto", Sans, Arial;
+  font-size: 2.0rem;
+}
+
+#welcome-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  color: white;
+  background: linear-gradient(-45deg, #99ccff, #9999ff, #cc99ff, #ff99ff);
+}
+
+#welcome-section-title {
+  font-family: 'Open Sans', proxima-nova, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 4em;
+  text-align: center;
+}
+
+#about-container {
+  display: flex;
+  padding-top: 7%;
+  padding-bottom: 7%;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: auto;
+}
+
+#about-section-title {
+  color: #333;
+  background: white;
+  font-size: 1.3em;
+}
+
+#about-section-text {
+  font-size: 1.2em;
+  text-align: center;
+  padding-top: 2%;
+}
+
+#about-section-img {
+  margin-top: 4%;
+  box-shadow: 5px 5px 5px #777;
+}
+
+#projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  background: #212121;
+}
+
+.projects-section {
+  text-align: center;
+  padding: 10rem 2rem;
+}
+
+#projects-section-title {
+  color: white;
+  padding-top: 7%;
+  padding-bottom: 3%;
+  font-size: 1.3em;
+}
+
+.project-image {
+  height: calc(100% - 6.8rem);
+  width: 100%;
+  object-fit: cover;
+}
+
+.project-title {
+  font-size: 1.5em;
+  padding: 2rem 0.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  text-align: center;
+  color: white;
+}
+
+.project-tile {
+  height: 400px;
+  width: 400px;
+}
+
+.project-tile:hover img {
+  transform: scale(1.1);
+}
+
+.project-tile a:link {
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 10px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 4rem;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  margin-bottom: 6rem;
+}
+
+#contact-section {
+  display: flex;
+  padding-top: 25%;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background: white;
+}
+
+#contact-section-title {
+  color: #333;
+  font-size: 1.5em;
+}
+
+#contact-section-title p {
+  font-size: 0.8em
+}
+
+img {
+  display: block;
+  width: 100%;
+  z-index: -1;
+  margin: auto;
+  transform: scale(1);
+  transition: all ease-in-out 0.5s;
+}
+
+#navbar {
+  text-decoration: none;
+}
+
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0);
+  z-index: 10;
+}
+
+.nav-list {
+  display: flex;
+  margin-right: 2rem;
+}
+
+.nav-list a:link {
+  text-decoration: none;
+  color: white;
+}
+
+.nav-list a:hover {
+  text-decoration: none;
+  color: #ff99ff;
+}
+
+.nav-list a:visited {
+  text-decoration: none;
+  color: white;
+}
+
+@media (max-width: 28.75em) {
+  .nav {
+    justify-content: center;
+  }
+
+  .nav-list {
+    margin: 0 1rem;
+  }
+}
+
+.nav-list a {
+  display: block;
+  font-size: 2.2rem;
+  padding: 2rem;
+}
+
+.nav-list a:hover {
+  background: var(--main-blue);
+}
+
+ul {
+  list-style-type: none;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 980px;
+  margin-top: 7em;
+  flex-wrap: wrap;
+}
+
+.contact-links a:link {
+  text-decoration: none;
+  color: #333;
+}
+
+.contact-links a:hover {
+  font-
+}
+
+.contact-links a:visited {
+  color: #333;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  border-radius: 2px;
+}
+
+.btn-show-all {
+  font-size: 2rem;
+  background: var(--main-gray);
+  transition: background 0.3s ease-out;
+}
+
+.btn-show-all:hover {
+  background: var(--main-red);
+}
+
+.btn-show-all:hover > i {
+  transform: translateX(2px);
+}
+
+.btn-show-all > i {
+  margin-left: 10px;
+  transform: translateX(0);
+  transition: transform 0.3s ease-out;
+}
+
+.contact-details {
+  font-size: 2.4rem;
+  transition: transform 0.3s ease-out;
+}
+
+.contact-details:hover {
+  transform: translateY(8px);
+}
